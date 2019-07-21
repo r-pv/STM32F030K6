@@ -2,6 +2,10 @@
 
 <img align="top" width=80% src="rSTM32F030K6T6.pinout.jpg" />
 
+
+<img align="top" width=80% src="rSTM32F030K6T6.front.jpg" />
+
+
 ## Install
 - This requires the [STM32 core for arduino](https://github.com/stm32duino/Arduino_Core_STM32/), the ST original.
 - I used this [guide to add the board](https://github.com/stm32duino/wiki/wiki/Add-a-new-variant-(board)), you can check it or continue with my suggestions to install the new board.
@@ -40,6 +44,13 @@ GenF0.menu.pnum.DEMO_F030K6.build.cmsis_lib_gcc=arm_cortexM0l_math
 - **rSTM32F030K6T6** it's the KiCAD 5.1.2 project.
 - **Schematic.pdf** as in the name.
 
+<img align="top" width=80% src="rSTM32F030K6T6.back.jpg" />
+
+
+## Running the blinky Sketch
+
+[![clip](https://img.youtube.com/vi/CpDF_MvAHyA/0.jpg)](https://www.youtube.com/watch?v=CpDF_MvAHyA)
+
 ## Notes
 
-This it's the first board variant I made, so errors may occurr.
+This it's the first board variant I made, so errors may occur.
