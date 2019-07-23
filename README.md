@@ -47,10 +47,12 @@ GenF0.menu.pnum.DEMO_F030K6.build.cmsis_lib_gcc=arm_cortexM0l_math
 <img align="top" width=80% src="rSTM32F030K6T6.back.jpg" />
 
 
-## Running the blinky Sketch
+## Running some tests
 
-[![clip](https://img.youtube.com/vi/CpDF_MvAHyA/0.jpg)](https://www.youtube.com/watch?v=CpDF_MvAHyA)
+[![clip](https://img.youtube.com/vi/J8X1p-aLzaY/0.jpg)](https://www.youtube.com/watch?v=J8X1p-aLzaY)
 
 ## Notes
 
 This it's the first board variant I made, so errors may occur.
+
+[STM32Duino thread.](http://www.stm32duino.com/viewtopic.php?f=30&p=55201)
