@@ -28,7 +28,7 @@
  *******************************************************************************
  */
 
-#include "variant.h"
+#include "pins_arduino.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -95,17 +95,11 @@ extern "C" {
   */
 WEAK void SystemClock_Config(void)
 {
-// Here copy the desired System Clock Configuration
-// It could be generated thanks STM32CubeMX after code generation for Toolchain/IDE: 'SW4STM32',
-// available in src/main.c
-// or
-// copied from a STM32CubeYY project examples
-// where 'YY' could be F0, F1, F2, F3, F4, F7, H7, L0, L1, L4
   RCC_OscInitTypeDef RCC_OscInitStruct;
   RCC_ClkInitTypeDef RCC_ClkInitStruct;
 
   /* Initializes the CPU, AHB and APB busses clocks */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI14|RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI14 | RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.HSI14State = RCC_HSI14_ON;
   RCC_OscInitStruct.HSI14CalibrationValue = 16;
@@ -118,8 +112,8 @@ WEAK void SystemClock_Config(void)
   }
 
   /* Initializes the CPU, AHB and APB busses clocks */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1;
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+                                | RCC_CLOCKTYPE_PCLK1;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
@@ -127,15 +121,6 @@ WEAK void SystemClock_Config(void)
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK) {
     _Error_Handler(__FILE__, __LINE__);
   }
-
-  /* Configure the Systick interrupt time */
-  HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq()/1000);
-
-  /* Configure the Systick */
-  HAL_SYSTICK_CLKSourceConfig(SYSTICK_CLKSOURCE_HCLK);
-
-  /* SysTick_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
 }
 
 #ifdef __cplusplus
