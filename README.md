@@ -9,7 +9,7 @@
 ## Install
 - This requires the [STM32 core for arduino](https://github.com/stm32duino/Arduino_Core_STM32/), the ST original.
 - I used this [guide to add the board](https://github.com/stm32duino/wiki/wiki/Add-a-new-variant-(board)), you can check it or continue with my suggestions to install the new board.
-- Copy the **"DEMO_F030K6"** folder to the Arduino **"variants"** folder, in win7 is located at: **c:\Users\\<USERNAME\>\AppData\Local\Arduino15\packages\STM32\hardware\stm32\1.5.0\variants**
+- Copy the **"DEMO_F030K6"** folder to the Arduino **"variants"** folder, in win7 is located at: **c:\Users\\<USERNAME\>\AppData\Local\Arduino15\packages\STM32\hardware\stm32\1.6.1\variants**
 - Edit the **"boards.txt"** file, in win7 is located at a lever up than the "variants" folder, search for the **F030F4** board and add the lines to leave as I show you next:
 ```
 # DEMO_F030F4 board
@@ -50,6 +50,31 @@ GenF0.menu.pnum.DEMO_F030K6.build.cmsis_lib_gcc=arm_cortexM0l_math
 ## Running some tests
 
 [![clip](https://img.youtube.com/vi/J8X1p-aLzaY/0.jpg)](https://www.youtube.com/watch?v=J8X1p-aLzaY)
+
+[![clip](https://img.youtube.com/vi/zFgptjPR0z0/0.jpg)](https://www.youtube.com/watch?v=zFgptjPR0z0)
+
+## Reducing the size of your sketch
+
+For some reason it seems that the sketchs for this platform gets way too fat (relative to standard arduino-atmel sketch sizes) and on some cases won't fit well on our board, a way to fit the sketchs to the flash/ram size that this board has it's to create a file **hal_conf_extra.h** on the sketch folder and disabling all features that weren't using:
+
+```
+#define HAL_ADC_MODULE_DISABLED
+#define HAL_I2C_MODULE_DISABLED
+#define HAL_RTC_MODULE_DISABLED
+#define HAL_SPI_MODULE_DISABLED
+#define HAL_TIM_MODULE_DISABLED
+#define HAL_DAC_MODULE_DISABLED
+#define HAL_EXTI_MODULE_DISABLED
+#define HAL_ETH_MODULE_DISABLED
+#define HAL_SD_MODULE_DISABLED
+#define HAL_QSPI_MODULE_DISABLED
+```
+_(an arduino restart may be required on changes to this file)._
+
+Also, if you aren't using the serial you cand disable it on the arduino menu:
+
+**Board > U(S)ART Support > Disabled.**
+
 
 ## Notes
 
