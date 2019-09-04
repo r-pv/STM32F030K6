@@ -1,5 +1,7 @@
 # rSTM32F030K6 ProMini
 
+An ST development board based on the rSTM32F030K6T6/rSTM32F030K6 (Clock: 48MHz, flash: 32Kb, Ram:4Kb) MCU (LQFP-32) compatible with STM32Duino (Arduino).
+
 <img align="top" width=80% src="rSTM32F030K6T6.pinout.jpg" />
 
 
