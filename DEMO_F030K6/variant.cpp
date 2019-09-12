@@ -39,43 +39,44 @@ extern "C" {
 // to STM32 PinName (PX_n)
 const PinName digitalPin[] = {
 //PX_n, //Dx
-// left.side
-  PA_0,  //D0
-  PA_1,  //D1
-  PA_2,  //D2  - TX
-  PA_3,  //D3  - RX
-  PA_4,  //D4  - LED
-  PA_5,  //D5  - SCK
-  PA_6,  //D6  - MISO
-  PA_7,  //D7  - MOSI
-  PB_0,  //D8  - SS
-  PB_1,  //D9  -
-// bottom
-  PA_13, //D10 - SWDIO
-  PA_14, //D11 - SWCLK
-// Right.side
-  PA_8,  //D12 -
-  PA_9,  //D13 - SCL (TX UART Header)
-  PA_10, //D14 - SDA (RX UART Header)
-  PA_11, //D15 - 
-  PA_12, //D16 - 
-  PA_15, //D17 - 
-  PB_3,  //D18 - 
-  PB_4,  //D19 - 
-  PB_5,  //D20 - 
-  PB_6,  //D21 - 
-  PB_7,  //D22 - 
-  // Duplicated pins in order to be aligned with PinMap_ADC
-// A0 have to be greater than NUM_ANALOG_INPUTS
-  PA_0,  //D13/A0 ~ D0
-  PA_1,  //D14/A1 ~ D1
-  PA_2,  //D15/A2 ~ D2
-  PA_3,  //D16/A3 ~ D3
-  PA_4,  //D17/A4 ~ D4
-  PA_5,  //D18/A5 ~ D5
-  PA_6,  //D19/A6 ~ D6
-  PA_7,  //D20/A7 ~ D7
-  PB_0   //D21/A8 ~ D8
+	// left.side
+	PA_0,  //D0
+	PA_1,  //D1
+	PA_2,  //D2  - TX
+	PA_3,  //D3  - RX
+	PA_4,  //D4  - LED
+	PA_5,  //D5  - SCK
+	PA_6,  //D6  - MISO
+	PA_7,  //D7  - MOSI
+	PB_0,  //D8  - SS
+	PB_1,  //D9  -
+	// bottom
+	PA_13, //D10 - SWDIO
+	PA_14, //D11 - SWCLK
+	// Right.side
+	PA_8,  //D12 -
+	PA_9,  //D13 - SCL (TX UART Header)
+	PA_10, //D14 - SDA (RX UART Header)
+	PA_11, //D15 - 
+	PA_12, //D16 - 
+	PA_15, //D17 - 
+	PB_3,  //D18 - 
+	PB_4,  //D19 - 
+	PB_5,  //D20 - 
+	PB_6,  //D21 - 
+	PB_7,  //D22 - 
+	// Duplicated pins in order to be aligned with PinMap_ADC
+	// A0 have to be greater than NUM_ANALOG_INPUTS
+	PA_0,
+	PA_1,
+	PA_2,
+	PA_3,
+	PA_4,
+	PA_5,
+	PA_6,
+	PA_7,
+	PB_0,
+	PB_1,
 };
 
 #ifdef __cplusplus
