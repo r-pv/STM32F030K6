@@ -39,34 +39,22 @@ extern "C" {
 // to STM32 PinName (PX_n)
 const PinName digitalPin[] = {
 //PX_n, //Dx
+	//.with.the.USB.on.the.bottom.and.left-to-right-to-top.naming;
 	// left.side
-	PA_0,  //D0
-	PA_1,  //D1
-	PA_2,  //D2  - TX
-	PA_3,  //D3  - RX
-	PA_4,  //D4  - LED
-	PA_5,  //D5  - SCK
-	PA_6,  //D6  - MISO
-	PA_7,  //D7  - MOSI
-	PB_0,  //D8  - SS
-	PB_1,  //D9  -
-	// bottom
-	PA_13, //D10 - SWDIO
-	PA_14, //D11 - SWCLK
+	PA_8,
+	PA_9,
+	PA_10,
+	PA_11,
+	PA_12,
+	PA_15,
+	PB_3,
+	PB_4,
+	PB_5,
+	PB_6,
+	PB_7,
+	// Bottom.side
+//USB
 	// Right.side
-	PA_8,  //D12 -
-	PA_9,  //D13 - SCL (TX UART Header)
-	PA_10, //D14 - SDA (RX UART Header)
-	PA_11, //D15 - 
-	PA_12, //D16 - 
-	PA_15, //D17 - 
-	PB_3,  //D18 - 
-	PB_4,  //D19 - 
-	PB_5,  //D20 - 
-	PB_6,  //D21 - 
-	PB_7,  //D22 - 
-	// Duplicated pins in order to be aligned with PinMap_ADC
-	// A0 have to be greater than NUM_ANALOG_INPUTS
 	PA_0,
 	PA_1,
 	PA_2,
@@ -77,6 +65,11 @@ const PinName digitalPin[] = {
 	PA_7,
 	PB_0,
 	PB_1,
+	// top.stlink
+	PA_13,
+	PA_14,
+	// Duplicated pins in order to be aligned with PinMap_ADC
+	// A0 have to be greater than NUM_ANALOG_INPUTS
 };
 
 #ifdef __cplusplus

@@ -40,33 +40,35 @@ extern "C"{
 /*----------------------------------------------------------------------------
  *        Pins
  *----------------------------------------------------------------------------*/
-// USB connector on the top, MCU side
-// Left.Side
-#define PA0  0  //D0/A0
-#define PA1  1  //D1/A1
-#define PA2  2  //D2/A2 - TX
-#define PA3  3  //D3/A3 - RX
-#define PA4  4  //D4/A4 - LED
-#define PA5  5  //D5/A5 - SCK
-#define PA6  6  //D6/A6 - MISO
-#define PA7  7  //D7/A7 - MOSI
-#define PB0  8  //D8/A8 - SS
-#define PB1  9  //D9/A8 - 
+//.with.the.USB.on.the.bottom.and.left-to-right-to-top.naming;
+// left.side
+#define PA8    0
+#define PA9    1
+#define PA10   2
+#define PA11   3
+#define PA12   4
+#define PA15   5
+#define PB3    6
+#define PB4    7
+#define PB5    8
+#define PB6    9
+#define PB7    10
 // Bottom.side
-#define PA13 10 //D10   - SWDIO
-#define PA14 11 //D11   - SWCLK
+//USB
 // Right.side
-#define PA8  12 //D12  -
-#define PA9  13 //D13  - 
-#define PA10 14 //D14  - 
-#define PA11 15 //D15  - 
-#define PA12 16 //D16  - 
-#define PA15 17 //D17  - 
-#define PB3  18 //D18  - 
-#define PB4  19 //D19  - 
-#define PB5  20 //D20  - 
-#define PB6  21 //D21  - 
-#define PB7  22 //D22  - 
+#define PA0    11
+#define PA1    12
+#define PA2    13
+#define PA3    14
+#define PA4    15
+#define PA5    16
+#define PA6    17
+#define PA7    18
+#define PB0    19
+#define PB1    20
+// top.stlink
+#define PA13   21
+#define PA14   22
 
 // Define pin names to match digital pin number --> Dx
 // It could be used with preprocessor tests (e.g. #if PXn == 3)
@@ -110,7 +112,7 @@ extern "C"{
 #define NUM_ANALOG_INPUTS       10
 // Define digital pin number of the first analog input  (i.e. which digital pin is A0)
 // First analog pin value (A0) must be greater than or equal to NUM_ANALOG_INPUTS
-#define NUM_ANALOG_FIRST        23
+#define NUM_ANALOG_FIRST        11
 
 // Below ADC, DAC and PWM definitions already done in the core
 // Could be redefined here if needed
